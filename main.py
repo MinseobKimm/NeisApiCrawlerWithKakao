@@ -102,7 +102,7 @@ if platform.system() == "Darwin":
 
 if __name__ == "__main__":
     params = {
-        "SCHUL_NM": "전북과학고등학교"
+        "SCHUL_NM": "소속 학교"
     }
     SchoolApi("schoolInfo", params).get_school_info()
     msg=""
