@@ -46,7 +46,10 @@ class SchoolApi:
         try:
             string = "<조식>\n"+data[0]["DDISH_NM"].replace("<br/>", "\n")+"\n\n"
             string+= "<중식>\n"+data[1]["DDISH_NM"].replace("<br/>", "\n")+"\n\n"
-            string += "<석식>\n" + data[2]["DDISH_NM"].replace("<br/>", "\n")
+            try:
+                string += "<석식>\n" + data[2]["DDISH_NM"].replace("<br/>", "\n")
+            except:
+                print('')
             characters = "1234567890./-*"
             for x in range(len(characters)):
                 string = string.replace(characters[x],"")
